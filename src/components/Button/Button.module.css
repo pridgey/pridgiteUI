@@ -1,0 +1,87 @@
+.button {
+  align-items: center;
+  --button-color: var(--color-primary);
+  background-color: var(--button-color);
+  border-radius: var(--button-radius);
+  border: 0px;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--font-weight-bold);
+  justify-content: center;
+  gap: var(--spacing-small);
+  padding: var(--button-padding);
+  white-space: nowrap;
+  width: var(--button-width);
+}
+
+.button svg {
+  font-size: var(--button-icon-size);
+}
+
+.button_link {
+  text-decoration: none;
+}
+
+.button:disabled {
+  background-color: var(--color-gray);
+  color: var(--color-text);
+  cursor: not-allowed;
+}
+
+.button:hover {
+  filter: brightness(var(--color-darken));
+}
+
+.button:active {
+  filter: brightness(var(--color-darken-2));
+}
+
+.button_outlined {
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+}
+
+.button_outlined:disabled {
+  background-color: transparent;
+  border-color: var(--color-gray);
+  color: var(--color-gray);
+}
+
+.button_text {
+  background-color: transparent;
+  color: var(--button-color);
+}
+
+.button_text:disabled {
+  background-color: transparent;
+  color: var(--color-gray);
+}
+
+.button_content {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 1rem;
+  justify-content: center;
+  font-weight: inherit;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.spin {
+  aspect-ratio: 1;
+  animation: 1s ease-in 0s infinite reverse both running spin;
+  animation-direction: normal;
+  height: 16px;
+  width: 16px;
+}

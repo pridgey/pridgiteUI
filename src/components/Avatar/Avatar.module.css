@@ -1,0 +1,15 @@
+.avatarbubble {
+  border-radius: 100%;
+  border: var(--avatar-border-thickness) solid var(--avatar-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-orange);
+  font-family: var(--font-avatar);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--avatar-color);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

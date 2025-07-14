@@ -1,0 +1,9 @@
+.separator {
+  border: none;
+  background-color: var(--divider-color);
+}
+
+.separator[data-orientation="horizontal"] {
+  height: 1px;
+  width: 100%;
+}

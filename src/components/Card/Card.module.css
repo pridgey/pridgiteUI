@@ -1,0 +1,30 @@
+.card {
+  background-color: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  height: var(--card-height);
+  gap: var(--spacing-medium);
+  opacity: var(--card-opacity);
+  padding: var(--card-padding);
+  width: var(--card-width);
+}
+
+/* Drop-in Animation */
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropIn {
+  animation: dropIn 0.3s ease-in-out forwards;
+}

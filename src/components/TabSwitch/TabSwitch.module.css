@@ -1,0 +1,65 @@
+.tabs {
+  width: 100%;
+}
+
+.tabs[data-orientation="vertical"] {
+  display: flex;
+}
+
+.tabsList {
+  position: relative;
+  display: flex;
+}
+
+.tabsList[data-orientation="horizontal"] {
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.tabsList[data-orientation="vertical"] {
+  flex-direction: column;
+  align-items: stretch;
+  border-right: 1px solid var(--color-gray);
+}
+
+.tabsIndicator {
+  position: absolute;
+  background-color: var(--color-primary);
+  transition: all 250ms;
+}
+
+.tabsIndicator[data-orientation="horizontal"] {
+  bottom: -1px;
+  height: 2px;
+}
+
+.tabsIndicator[data-orientation="vertical"] {
+  right: -1px;
+  width: 2px;
+}
+
+.tabsTrigger {
+  background-color: transparent;
+  border: 0px;
+  color: var(--color-text);
+  display: inline-block;
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-medium);
+  outline: none;
+  width: 100%;
+}
+
+.tabsTrigger:hover {
+  color: var(--color-primary);
+}
+
+.tabsTrigger:focus-visible {
+  color: var(--color-primary);
+}
+
+.tabsTrigger[data-disabled],
+.tabsTrigger[data-disabled]:hover {
+  opacity: 0.5;
+  background-color: transparent;
+}

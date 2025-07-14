@@ -1,0 +1,71 @@
+.switch_labelTop {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.switch_labelSide {
+  align-items: center;
+  display: grid;
+  gap: 2px var(--spacing-small);
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas: "switch label" ". subtext";
+}
+
+.switch_control {
+  align-items: center;
+  background-color: var(--color-fullbackground);
+  border: 1px solid var(--color-gray);
+  border-radius: 12px;
+  display: inline-flex;
+  grid-area: switch;
+  height: 24px;
+  padding: 0 2px;
+  transition: 250ms background-color;
+  width: 44px;
+}
+
+.switch_control[data-checked] {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.switch_thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: var(--color-gray);
+  transition: 250ms transform;
+}
+
+.switch_thumb[data-checked] {
+  transform: translateX(calc(100% - 1px));
+  background-color: var(--color-fullwhite);
+}
+
+.switch_label {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-semibold);
+  grid-area: label;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.switch_helper,
+.switch_error {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  grid-area: subtext;
+}
+
+.switch_helper[data-invalid] {
+  display: none;
+}
+
+.switch_error {
+  color: var(--color-error);
+}
