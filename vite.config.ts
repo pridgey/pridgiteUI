@@ -10,7 +10,7 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["solid-js", "@kobalte/core"],
+      external: ["solid-js", "@kobalte/core", "solid-icons"],
     },
   },
 });
