@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
-  "scripts": {
-    "build": "vite build && tsc",
+   "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
@@ -15,7 +15,8 @@
   "type": "module",
   "sideEffects": [
     "**/*.css",
-    "**/*.module.css"
+    "**/*.module.css",
+    "node_modules/@kobalte/core/**/*"
   ],
   "peerDependencies": {
     "@kobalte/core": "^0.13.10",
