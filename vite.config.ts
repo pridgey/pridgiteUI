@@ -11,14 +11,18 @@ export default defineConfig({
     rollupOptions: {
       external: ["solid-js", "@kobalte/core", "solid-icons"],
       output: {
-        // Preserve CSS files as separate assets
         assetFileNames: "assets/[name][extname]",
+      },
+      treeshake: {
+        preset: "smallest",
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
       },
     },
   },
   css: {
     modules: {
-      generateScopedName: "[name]__[local]___[hash:base64:5]", // Consistent class names
+      generateScopedName: "[name]__[local]___[hash:base64:5]",
     },
   },
 });
