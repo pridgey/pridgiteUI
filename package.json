@@ -1,5 +1,12 @@
 {
   "name": "@pridgey/pridgiteui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pridgey/pridgiteUI.git"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

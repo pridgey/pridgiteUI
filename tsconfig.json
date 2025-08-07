@@ -12,6 +12,7 @@
         "outDir": "dist",
         "rootDir": "src",
         "types": ["vite/client"],
+        "skipLibCheck": true,
     },
     "include": ["src"],
     "exclude": ["node_modules"]
