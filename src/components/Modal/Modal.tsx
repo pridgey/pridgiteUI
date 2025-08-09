@@ -24,6 +24,7 @@ export const Modal = (props: ModalProps) => {
     <Portal>
       <div class={styles.container}>
         <dialog
+          closedby="any"
           class={styles.modal}
           open={true}
           style={{ "--modal-width": props.width ?? "500px" }}
