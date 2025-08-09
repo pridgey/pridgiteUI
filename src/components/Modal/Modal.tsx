@@ -5,7 +5,7 @@ import { Text } from "../Text";
 import { Button } from "../Button";
 import { IoClose } from "solid-icons/io";
 import { Show } from "solid-js";
-import { clientOnly } from "@solidjs/start/.";
+import { clientOnly } from "@solidjs/start";
 
 type ModalProps = {
   children: JSX.Element;

@@ -4,7 +4,7 @@ import { createSignal, onCleanup } from "solid-js";
 import styled from "./Button.module.css";
 import { Show } from "solid-js/web";
 import { TbLoader2 } from "solid-icons/tb";
-import { clientOnly } from "@solidjs/start/.";
+import { clientOnly } from "@solidjs/start";
 
 const LONG_PRESS_DELAY_DEFAULT = 500;
 const SCROLL_THRESHOLD = 10; // pixels - adjust as needed

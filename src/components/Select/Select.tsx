@@ -3,7 +3,7 @@ import { FiChevronDown, FiCheck } from "solid-icons/fi";
 import { AiOutlineCloseCircle } from "solid-icons/ai";
 import styles from "./Select.module.css";
 import { createMemo, Match, Show, Switch } from "solid-js";
-import { clientOnly } from "@solidjs/start/.";
+import { clientOnly } from "@solidjs/start";
 
 interface SelectOptionProps {
   value: string;

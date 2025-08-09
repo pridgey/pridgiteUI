@@ -9,7 +9,7 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: ["solid-js", "@kobalte/core", "solid-icons"],
+      external: ["solid-js", "@kobalte/core", "solid-icons", "@solidjs/start"],
       output: {
         assetFileNames: "assets/[name][extname]",
       },

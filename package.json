@@ -11,8 +11,10 @@
   "description": "",
   "main": "dist/pridgiteui.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
-   "scripts": {
+  "files": [
+    "dist"
+  ],
+  "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build"
   },
@@ -40,6 +42,10 @@
     "@types/node": "^24.0.13",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vite-plugin-solid": "^2.11.7"
+    "vite-plugin-solid": "^2.11.7",
+    "@solidjs/start": "^1.0.0",
+    "@kobalte/core": "^0.13.10",
+    "solid-icons": "^1.1.0",
+    "solid-js": "^1.8.0"
   }
 }

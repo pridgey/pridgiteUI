@@ -1,5 +1,5 @@
 import { createMemo, createSignal, Match, Show, Switch } from "solid-js";
-import { clientOnly } from "@solidjs/start/.";
+import { clientOnly } from "@solidjs/start";
 import { DropdownOptions, Option } from "../DropdownOptions";
 import styles from "./Avatar.module.css";
 
