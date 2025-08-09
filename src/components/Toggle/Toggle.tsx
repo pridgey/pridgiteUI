@@ -14,8 +14,6 @@ type ToggleProps = {
 };
 
 export const Toggle = (props: ToggleProps) => {
-  console.log("Toggle Debug:", { props });
-
   return (
     <KobatleSwitch
       checked={props.checked}

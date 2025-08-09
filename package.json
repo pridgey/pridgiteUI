@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/pridgey/pridgiteUI.git"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/pridgiteui.js",
   "types": "dist/index.d.ts",
@@ -28,7 +28,13 @@
   "peerDependencies": {
     "@kobalte/core": "^0.13.10",
     "solid-icons": "^1.1.0",
-    "solid-js": "^1.9.7"
+    "@solidjs/start": ">=1.0.0",
+    "solid-js": ">=1.8.0"
+  },
+  "peerDependenciesMeta": {
+    "@solidjs/start": {
+      "optional": false
+    }
   },
   "devDependencies": {
     "@types/node": "^24.0.13",

@@ -2,6 +2,7 @@ import { For, Portal } from "solid-js/web";
 import { createSignal, onMount, onCleanup } from "solid-js";
 import type { JSX } from "solid-js";
 import styles from "./DropdownOptions.module.css";
+import { clientOnly } from "@solidjs/start/.";
 
 export type Option = {
   label: string;
@@ -108,3 +109,7 @@ export const DropdownOptions = (props: DropdownOptionsProps) => {
     </Portal>
   );
 };
+
+export const DropdownOptionsCO = clientOnly(() =>
+  Promise.resolve({ default: DropdownOptions })
+);

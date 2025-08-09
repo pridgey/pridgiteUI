@@ -5,6 +5,7 @@ import { Text } from "../Text";
 import { Button } from "../Button";
 import { IoClose } from "solid-icons/io";
 import { Show } from "solid-js";
+import { clientOnly } from "@solidjs/start/.";
 
 type ModalProps = {
   children: JSX.Element;
@@ -74,3 +75,5 @@ export const Modal = (props: ModalProps) => {
     </Portal>
   );
 };
+
+export const ModalCO = clientOnly(() => Promise.resolve({ default: Modal }));

@@ -3,6 +3,7 @@ import { FiChevronDown, FiCheck } from "solid-icons/fi";
 import { AiOutlineCloseCircle } from "solid-icons/ai";
 import styles from "./Select.module.css";
 import { createMemo, Match, Show, Switch } from "solid-js";
+import { clientOnly } from "@solidjs/start/.";
 
 interface SelectOptionProps {
   value: string;
@@ -226,3 +227,5 @@ export const Select = (props: SelectProps) => {
     </Switch>
   );
 };
+
+export const SelectCO = clientOnly(() => Promise.resolve({ default: Select }));

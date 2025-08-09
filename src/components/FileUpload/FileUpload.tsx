@@ -2,6 +2,7 @@ import { Details, FileField, FileRejection } from "@kobalte/core/file-field";
 import styles from "./FileUpload.module.css";
 import { JSX, Match, Show, Switch } from "solid-js";
 import { AiOutlineLoading } from "solid-icons/ai";
+import { clientOnly } from "@solidjs/start/.";
 
 type FileUploadProps = {
   accept?: string | string[];
@@ -112,3 +113,7 @@ export const FileUpload = (props: FileUploadProps) => {
     </FileField>
   );
 };
+
+export const FileUploadCO = clientOnly(() =>
+  Promise.resolve({ default: FileUpload })
+);
