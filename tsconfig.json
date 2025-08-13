@@ -2,6 +2,15 @@
     "compilerOptions": {
         "target": "esnext",
         "module": "esnext",
+        "lib": [
+			"dom",
+			"dom.iterable",
+			"esnext",
+			"scripthost"
+		],
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true,
         "moduleResolution": "node",
         "strict": true,
         "jsx": "preserve",
@@ -11,7 +20,8 @@
         "emitDeclarationOnly": true,
         "outDir": "dist",
         "rootDir": "src",
-        "types": ["vite/client"],
+        "sourceMap": true,
+        "types": ["solid-js", "vite/client", "node"],
         "skipLibCheck": true,
     },
     "include": ["src"],

@@ -13,11 +13,11 @@ export default defineConfig({
       output: {
         assetFileNames: "assets/[name][extname]",
       },
-      treeshake: {
-        preset: "smallest",
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
+      // Remove or tone down the aggressive tree-shaking
+      // treeshake: {
+      //   preset: "recommended", // Changed from "smallest"
+      //   // Remove the other aggressive options for now
+      // },
     },
   },
   css: {

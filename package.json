@@ -7,15 +7,15 @@
     "type": "git",
     "url": "git+https://github.com/pridgey/pridgiteUI.git"
   },
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "",
-  "main": "dist/pridgiteui.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build && tsc --emitDeclarationOnly",
+    "build": "tsup src/index.ts && tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
@@ -28,10 +28,9 @@
     "node_modules/@kobalte/core/**/*"
   ],
   "peerDependencies": {
-    "@kobalte/core": "^0.13.10",
+    "@kobalte/core": "^0.13.11",
     "solid-icons": "^1.1.0",
-    "@solidjs/start": ">=1.0.0",
-    "solid-js": ">=1.8.0"
+    "solid-js": ">=1.8.15"
   },
   "peerDependenciesMeta": {
     "@solidjs/start": {
@@ -39,13 +38,14 @@
     }
   },
   "devDependencies": {
+    "@kobalte/core": "^0.13.11",
+    "@solidjs/start": "^1.1.7",
     "@types/node": "^24.0.13",
+    "solid-icons": "^1.1.0",
+    "solid-js": "^1.9.9",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vite-plugin-solid": "^2.11.7",
-    "@solidjs/start": "^1.0.0",
-    "@kobalte/core": "^0.13.10",
-    "solid-icons": "^1.1.0",
-    "solid-js": "^1.8.0"
+    "vite-plugin-solid": "^2.11.8"
   }
 }

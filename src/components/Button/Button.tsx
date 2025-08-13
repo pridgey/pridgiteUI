@@ -2,7 +2,7 @@ import { Button as KobatleButton } from "@kobalte/core";
 import type { JSX } from "solid-js";
 import { createSignal, onCleanup } from "solid-js";
 import styled from "./Button.module.css";
-import { Show } from "solid-js/web";
+import { isServer, Show } from "solid-js/web";
 import { TbLoader2 } from "solid-icons/tb";
 import { clientOnly } from "@solidjs/start";
 
@@ -104,6 +104,7 @@ export const Button = (props: ButtonProps) => {
   };
 
   const handleMouseDown = () => {
+    if (isServer || typeof window === "undefined") return; // Skip on server-side rendering
     if (!props.onLongPress || props.disabled) return;
 
     setIsLongPressed(false);
@@ -134,6 +135,7 @@ export const Button = (props: ButtonProps) => {
 
   // Touch events for mobile with scroll detection
   const handleTouchStart = (e: TouchEvent) => {
+    if (isServer || typeof window === "undefined") return; // Skip on server-side rendering
     if (!props.onLongPress || props.disabled) return;
 
     e.preventDefault(); // Prevent context menu on mobile
