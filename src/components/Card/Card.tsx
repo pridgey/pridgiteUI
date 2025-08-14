@@ -20,7 +20,7 @@ type CardProps = {
   height?: string;
   left?: string;
   margin?: "small" | "medium" | "large";
-  padding?: "mini" | "small" | "medium" | "large";
+  padding?: "mini" | "small" | "medium" | "large" | "none";
   position?: "relative" | "absolute";
   right?: string;
   top?: string;
@@ -63,7 +63,9 @@ export const Card = (props: CardProps) => {
         "--card-height": props.height || "unset",
         "--card-width": props.width || "unset",
         "--card-padding": props.padding
-          ? `var(--spacing-${props.padding})`
+          ? props.padding === "none"
+            ? "0"
+            : `var(--spacing-${props.padding})`
           : "var(--spacing-medium)",
       }}
     >

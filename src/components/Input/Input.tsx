@@ -5,6 +5,14 @@ import { Button } from "../Button";
 import { FiEye, FiEyeOff } from "solid-icons/fi";
 
 export type InputProps = {
+  backgroundColor?:
+    | "white"
+    | "black"
+    | "text"
+    | "foreground"
+    | "background"
+    | "fullbackground"
+    | "fullforeground";
   defaultValue?: string;
   error?: string;
   fontSize?: "mini" | "small" | "text" | "header" | "large" | "extra-large";
@@ -45,6 +53,9 @@ export const Input = (props: InputProps) => {
       name={props.name}
       onChange={props.onChange}
       style={{
+        "--input-background": props.backgroundColor
+          ? `var(--color-${props.backgroundColor})`
+          : "transparent",
         "--input-border":
           props.variant === "inline"
             ? "unset"
