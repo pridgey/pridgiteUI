@@ -26,7 +26,6 @@ export const Flex = (props: FlexProps) => {
   return (
     <div
       style={{
-        ...props.style,
         display: "flex",
         "align-items": props.alignItems,
         "flex-direction": props.direction,
@@ -39,6 +38,7 @@ export const Flex = (props: FlexProps) => {
           props.paddingY ?? props.padding
         ),
         width: props.width,
+        ...props.style,
       }}
     >
       {props.children}
