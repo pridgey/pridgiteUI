@@ -22,6 +22,7 @@ export type InputProps = {
     | "fullforeground";
   multiline?: boolean;
   name?: string;
+  onBlur?: (currentValue: string) => void;
   onChange?: (newValue: string) => void;
   placeholder?: string;
   type?: "text" | "password" | "number" | "time" | "date" | "email";
@@ -70,6 +71,11 @@ export const Input = (props: InputProps) => {
               [styles.input_control]: true,
               [styles.input_multiline]: true,
             }}
+            onBlur={(e) => {
+              if (props.onBlur) {
+                props.onBlur(e.currentTarget.value);
+              }
+            }}
             placeholder={props.placeholder}
             style={{
               "font-size": `var(--font-size-${props.fontSize ?? "text"})`,
@@ -88,6 +94,11 @@ export const Input = (props: InputProps) => {
             <TextField.Input
               aria-label={props.label}
               class={styles.input_control}
+              onBlur={(e) => {
+                if (props.onBlur) {
+                  props.onBlur(e.currentTarget.value);
+                }
+              }}
               placeholder={props.placeholder}
               style={{
                 "font-size": `var(--font-size-${props.fontSize ?? "text"})`,
