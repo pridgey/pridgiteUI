@@ -19,4 +19,9 @@ export default defineConfig({
     options.jsxImportSource = "solid-js";
   },
   clean: true,
+  outExtension({ format }) {
+    return {
+      js: ".jsx",
+    };
+  },
 });
