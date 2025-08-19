@@ -5,6 +5,7 @@ import { Button } from "../Button";
 import { FiEye, FiEyeOff } from "solid-icons/fi";
 
 export type InputProps = {
+  autocomplete?: string;
   backgroundColor?:
     | "white"
     | "black"
@@ -33,6 +34,7 @@ export type InputProps = {
   onBlur?: (currentValue: string) => void;
   onChange?: (newValue: string) => void;
   placeholder?: string;
+  ref?: HTMLInputElement | HTMLTextAreaElement;
   type?: "text" | "password" | "number" | "time" | "date" | "email";
   width?: string;
   variant?: "inline" | "outlined";
@@ -82,12 +84,13 @@ export const Input = (props: InputProps) => {
               [styles.input_control]: true,
               [styles.input_multiline]: true,
             }}
-            onBlur={(e) => {
+            onBlur={(e: Event) => {
               if (props.onBlur) {
-                props.onBlur(e.currentTarget.value);
+                props.onBlur((e.currentTarget as HTMLTextAreaElement).value);
               }
             }}
             placeholder={props.placeholder}
+            ref={props.ref}
             style={{
               "font-size": `var(--font-size-${props.fontSize ?? "text"})`,
               "font-weight": `var(--font-weight-${
@@ -104,6 +107,7 @@ export const Input = (props: InputProps) => {
           <div class={styles.input_wrapper}>
             <TextField.Input
               aria-label={props.label}
+              autocomplete={props.autocomplete}
               class={styles.input_control}
               onBlur={(e) => {
                 if (props.onBlur) {
@@ -111,6 +115,7 @@ export const Input = (props: InputProps) => {
                 }
               }}
               placeholder={props.placeholder}
+              ref={props.ref as HTMLInputElement}
               style={{
                 "font-size": `var(--font-size-${props.fontSize ?? "text"})`,
                 "font-weight": `var(--font-weight-${
