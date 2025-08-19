@@ -30,6 +30,7 @@ export type ButtonProps = {
   disabled?: boolean;
   disableRadius?: boolean;
   fontSize?: "mini" | "small" | "text" | "header" | "large" | "extra-large";
+  fontWeight?: "light" | "normal" | "semibold" | "bold";
   href?: string;
   iconSize?: string;
   onClick?: () => void;
@@ -91,6 +92,7 @@ export const Button = (props: ButtonProps) => {
         : `var(--spacing-${props.padding ?? "medium"})`,
     "--button-radius": props.disableRadius ? "0px" : "var(--border-radius)",
     "--button-font-size": `var(--font-size-${props.fontSize ?? "text"})`,
+    "--button-font-weight": `var(--font-weight-${props.fontWeight ?? "bold"})`,
     "--button-icon-size": props.iconSize ?? "unset",
     "--button-width": props.width ?? "unset",
   };
