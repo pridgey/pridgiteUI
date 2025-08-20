@@ -27,7 +27,7 @@ export type DropdownOptionsProps = {
  * Adds a dropdown menu to an element
  */
 export const DropdownOptions = (props: DropdownOptionsProps) => {
-  let optionContainerRef: HTMLDivElement = (<div></div>) as HTMLDivElement;
+  let optionContainerRef!: HTMLDivElement;
 
   const [inlineStyles, setInlineStyles] = createSignal<JSX.CSSProperties>();
 
