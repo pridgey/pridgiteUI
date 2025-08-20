@@ -23,6 +23,7 @@ type CardProps = {
   padding?: "mini" | "small" | "medium" | "large" | "none";
   position?: "relative" | "absolute";
   right?: string;
+  style?: JSX.CSSProperties;
   top?: string;
   variant?: "default" | "alternate" | "transparent" | "outlined";
   width?: string;
@@ -67,6 +68,7 @@ export const Card = (props: CardProps) => {
             ? "0"
             : `var(--spacing-${props.padding})`
           : "var(--spacing-medium)",
+        ...props.style,
       }}
     >
       {props.children}

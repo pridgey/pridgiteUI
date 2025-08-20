@@ -1,6 +1,7 @@
 import { Tabs } from "@kobalte/core";
-import { For, type JSX } from "solid-js";
+import { Component, For, type JSX } from "solid-js";
 import styles from "./TabSwitch.module.css";
+import { clientOnly } from "@solidjs/start";
 
 type TabProps = {
   content: () => JSX.Element;
@@ -42,3 +43,7 @@ export const TabSwitch = (props: TabSwitchProps) => {
     </Tabs.Root>
   );
 };
+
+export const TabSwitchCO = clientOnly(() =>
+  Promise.resolve({ default: TabSwitch })
+);
