@@ -12,6 +12,33 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.input_topbar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-backdrop);
+  border-radius: var(--border-radius);
+  background-color: var(--color-backdrop-invert);
+}
+
+.input_topbar_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input_topbar_text {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-mini);
+  font-weight: var(--font-weight-light);
+  margin: var(--spacing-small);
+}
+
+.no_topbar {
+  border: 0px;
+}
+
 .input_control {
   background-color: var(--input-background);
   border: 0px;
