@@ -111,7 +111,6 @@ These components work seamlessly with SSR frameworks like Solid Start:
 - **Divider** - Visual separator element
 - **Flex** - Flexbox layout component
 - **Input** - Form input with validation
-- **TabSwitch** - Tab navigation component
 - **Text** - Typography component with dynamic elements
 - **Toggle** - Toggle switch component
 
@@ -125,6 +124,7 @@ These components require browser APIs and must be wrapped with `clientOnly()` in
 - **FileUpload** - File upload with drag & drop support
 - **Modal** - Modal dialog with portal rendering
 - **Select** - Select dropdown with portal rendering
+- **TabSwitch** - Rendering components in multiple tabs can cause SSR issues
 
 For convenience, pre-wrapped client-only versions are also exported with a `CO` suffix:
 
@@ -134,6 +134,7 @@ For convenience, pre-wrapped client-only versions are also exported with a `CO` 
 - **FileUploadCO** - Client-only FileUpload component
 - **ModalCO** - Client-only Modal component
 - **SelectCO** - Client-only Select component
+- **TabSwitchCO** - Client-only TabSwitch component
 
 ## Using Client-Only Components in SSR
 
